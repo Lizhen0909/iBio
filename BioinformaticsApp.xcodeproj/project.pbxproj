@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E3F21B5ABA3B00850989 /* AppDelegate.swift */; };
+		1183E3F81B5ABA3B00850989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3F61B5ABA3B00850989 /* Main.storyboard */; };
+		1183E3FA1B5ABA3B00850989 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3F91B5ABA3B00850989 /* Images.xcassets */; };
+		1183E3FD1B5ABA3B00850989 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3FB1B5ABA3B00850989 /* LaunchScreen.xib */; };
+		1183E4091B5ABA3B00850989 /* BioinformaticsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4081B5ABA3B00850989 /* BioinformaticsAppTests.swift */; };
+		1183E4131B5ABBF900850989 /* JX469983.fasta in Resources */ = {isa = PBXBuildFile; fileRef = 1183E4121B5ABBF900850989 /* JX469983.fasta */; };
+		1183E4151B5ABC8900850989 /* JX069768.fasta in Resources */ = {isa = PBXBuildFile; fileRef = 1183E4141B5ABC8900850989 /* JX069768.fasta */; };
+		1183E4171B5AC29C00850989 /* FastaFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4161B5AC29C00850989 /* FastaFormat.swift */; };
+		1183E41B1B5AC48D00850989 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E41A1B5AC48D00850989 /* RootTableViewController.swift */; };
+		1183E41D1B5AD1C400850989 /* DNASeqCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1183E41C1B5AD1C400850989 /* DNASeqCell.xib */; };
+		1183E41F1B5AD49C00850989 /* DNASeqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E41E1B5AD49C00850989 /* DNASeqCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1183E4031B5ABA3B00850989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1183E3E51B5ABA3A00850989 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1183E3EC1B5ABA3B00850989;
+			remoteInfo = BioinformaticsApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1183E3ED1B5ABA3B00850989 /* BioinformaticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioinformaticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1183E3F11B5ABA3B00850989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1183E3F21B5ABA3B00850989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1183E3F71B5ABA3B00850989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1183E3F91B5ABA3B00850989 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1183E3FC1B5ABA3B00850989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1183E4021B5ABA3B00850989 /* BioinformaticsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BioinformaticsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1183E4071B5ABA3B00850989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1183E4081B5ABA3B00850989 /* BioinformaticsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioinformaticsAppTests.swift; sourceTree = "<group>"; };
+		1183E4121B5ABBF900850989 /* JX469983.fasta */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JX469983.fasta; sourceTree = "<group>"; };
+		1183E4141B5ABC8900850989 /* JX069768.fasta */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JX069768.fasta; sourceTree = "<group>"; };
+		1183E4161B5AC29C00850989 /* FastaFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastaFormat.swift; sourceTree = "<group>"; };
+		1183E41A1B5AC48D00850989 /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
+		1183E41C1B5AD1C400850989 /* DNASeqCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DNASeqCell.xib; sourceTree = "<group>"; };
+		1183E41E1B5AD49C00850989 /* DNASeqCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNASeqCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1183E3EA1B5ABA3B00850989 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1183E3FF1B5ABA3B00850989 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1183E3E41B5ABA3A00850989 = {
+			isa = PBXGroup;
+			children = (
+				1183E3EF1B5ABA3B00850989 /* BioinformaticsApp */,
+				1183E4051B5ABA3B00850989 /* BioinformaticsAppTests */,
+				1183E3EE1B5ABA3B00850989 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1183E3EE1B5ABA3B00850989 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1183E3ED1B5ABA3B00850989 /* BioinformaticsApp.app */,
+				1183E4021B5ABA3B00850989 /* BioinformaticsAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1183E3EF1B5ABA3B00850989 /* BioinformaticsApp */ = {
+			isa = PBXGroup;
+			children = (
+				1183E3F21B5ABA3B00850989 /* AppDelegate.swift */,
+				1183E3F61B5ABA3B00850989 /* Main.storyboard */,
+				1183E3F91B5ABA3B00850989 /* Images.xcassets */,
+				1183E3FB1B5ABA3B00850989 /* LaunchScreen.xib */,
+				1183E3F01B5ABA3B00850989 /* Supporting Files */,
+				1183E4121B5ABBF900850989 /* JX469983.fasta */,
+				1183E4141B5ABC8900850989 /* JX069768.fasta */,
+				1183E4161B5AC29C00850989 /* FastaFormat.swift */,
+				1183E41A1B5AC48D00850989 /* RootTableViewController.swift */,
+				1183E41C1B5AD1C400850989 /* DNASeqCell.xib */,
+				1183E41E1B5AD49C00850989 /* DNASeqCell.swift */,
+			);
+			path = BioinformaticsApp;
+			sourceTree = "<group>";
+		};
+		1183E3F01B5ABA3B00850989 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1183E3F11B5ABA3B00850989 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1183E4051B5ABA3B00850989 /* BioinformaticsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1183E4081B5ABA3B00850989 /* BioinformaticsAppTests.swift */,
+				1183E4061B5ABA3B00850989 /* Supporting Files */,
+			);
+			path = BioinformaticsAppTests;
+			sourceTree = "<group>";
+		};
+		1183E4061B5ABA3B00850989 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1183E4071B5ABA3B00850989 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1183E3EC1B5ABA3B00850989 /* BioinformaticsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1183E40C1B5ABA3B00850989 /* Build configuration list for PBXNativeTarget "BioinformaticsApp" */;
+			buildPhases = (
+				1183E3E91B5ABA3B00850989 /* Sources */,
+				1183E3EA1B5ABA3B00850989 /* Frameworks */,
+				1183E3EB1B5ABA3B00850989 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BioinformaticsApp;
+			productName = BioinformaticsApp;
+			productReference = 1183E3ED1B5ABA3B00850989 /* BioinformaticsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1183E4011B5ABA3B00850989 /* BioinformaticsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1183E40F1B5ABA3B00850989 /* Build configuration list for PBXNativeTarget "BioinformaticsAppTests" */;
+			buildPhases = (
+				1183E3FE1B5ABA3B00850989 /* Sources */,
+				1183E3FF1B5ABA3B00850989 /* Frameworks */,
+				1183E4001B5ABA3B00850989 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1183E4041B5ABA3B00850989 /* PBXTargetDependency */,
+			);
+			name = BioinformaticsAppTests;
+			productName = BioinformaticsAppTests;
+			productReference = 1183E4021B5ABA3B00850989 /* BioinformaticsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1183E3E51B5ABA3A00850989 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Lizhen Shi";
+				TargetAttributes = {
+					1183E3EC1B5ABA3B00850989 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					1183E4011B5ABA3B00850989 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 1183E3EC1B5ABA3B00850989;
+					};
+				};
+			};
+			buildConfigurationList = 1183E3E81B5ABA3A00850989 /* Build configuration list for PBXProject "BioinformaticsApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1183E3E41B5ABA3A00850989;
+			productRefGroup = 1183E3EE1B5ABA3B00850989 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1183E3EC1B5ABA3B00850989 /* BioinformaticsApp */,
+				1183E4011B5ABA3B00850989 /* BioinformaticsAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1183E3EB1B5ABA3B00850989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1183E3F81B5ABA3B00850989 /* Main.storyboard in Resources */,
+				1183E3FD1B5ABA3B00850989 /* LaunchScreen.xib in Resources */,
+				1183E4131B5ABBF900850989 /* JX469983.fasta in Resources */,
+				1183E4151B5ABC8900850989 /* JX069768.fasta in Resources */,
+				1183E3FA1B5ABA3B00850989 /* Images.xcassets in Resources */,
+				1183E41D1B5AD1C400850989 /* DNASeqCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1183E4001B5ABA3B00850989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1183E3E91B5ABA3B00850989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1183E41B1B5AC48D00850989 /* RootTableViewController.swift in Sources */,
+				1183E4171B5AC29C00850989 /* FastaFormat.swift in Sources */,
+				1183E41F1B5AD49C00850989 /* DNASeqCell.swift in Sources */,
+				1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1183E3FE1B5ABA3B00850989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1183E4091B5ABA3B00850989 /* BioinformaticsAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1183E4041B5ABA3B00850989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1183E3EC1B5ABA3B00850989 /* BioinformaticsApp */;
+			targetProxy = 1183E4031B5ABA3B00850989 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1183E3F61B5ABA3B00850989 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1183E3F71B5ABA3B00850989 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1183E3FB1B5ABA3B00850989 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1183E3FC1B5ABA3B00850989 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1183E40A1B5ABA3B00850989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1183E40B1B5ABA3B00850989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1183E40D1B5ABA3B00850989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BioinformaticsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1183E40E1B5ABA3B00850989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BioinformaticsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1183E4101B5ABA3B00850989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BioinformaticsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BioinformaticsApp.app/BioinformaticsApp";
+			};
+			name = Debug;
+		};
+		1183E4111B5ABA3B00850989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BioinformaticsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BioinformaticsApp.app/BioinformaticsApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1183E3E81B5ABA3A00850989 /* Build configuration list for PBXProject "BioinformaticsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1183E40A1B5ABA3B00850989 /* Debug */,
+				1183E40B1B5ABA3B00850989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1183E40C1B5ABA3B00850989 /* Build configuration list for PBXNativeTarget "BioinformaticsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1183E40D1B5ABA3B00850989 /* Debug */,
+				1183E40E1B5ABA3B00850989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1183E40F1B5ABA3B00850989 /* Build configuration list for PBXNativeTarget "BioinformaticsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1183E4101B5ABA3B00850989 /* Debug */,
+				1183E4111B5ABA3B00850989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1183E3E51B5ABA3A00850989 /* Project object */;
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DTB-dn-TYA">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--DNA Sequences-->
+        <scene sceneID="1FS-Dj-pup">
+            <objects>
+                <tableViewController id="1WG-h4-HDR" customClass="RootTableViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JxX-TE-xJq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="seqTableIdentifier" id="0LD-uo-XEf">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0LD-uo-XEf" id="Zdg-d0-i9d">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1WG-h4-HDR" id="LjI-vu-diR"/>
+                            <outlet property="delegate" destination="1WG-h4-HDR" id="da3-p9-Iqi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="DNA Sequences" id="99J-61-rBJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Do-z8-iMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mDz-4d-biE">
+            <objects>
+                <navigationController id="DTB-dn-TYA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rtf-q5-2r6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1WG-h4-HDR" kind="relationship" relationship="rootViewController" id="SsZ-DR-cd3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zd7-wM-9FC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-486" y="339"/>
+        </scene>
+    </scenes>
+</document>
