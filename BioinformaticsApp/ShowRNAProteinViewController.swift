@@ -2,7 +2,7 @@
 //  ShowRNAProteinViewController.swift
 //  BioinformaticsApp
 //
-//  Created by Bo Chen on 7/19/15.
+//  Created by Lizhen Shi on 7/19/15.
 //  Copyright (c) 2015 Lizhen Shi. All rights reserved.
 //
 
@@ -10,10 +10,21 @@ import UIKit
 
 class ShowRNAProteinViewController: UIViewController {
 
+    @IBOutlet weak var seqText: UITextView!
+    var dnaString:String!
+    var type:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if type == "RNA" {
+            self.title="RNA Translation"
+            seqText.text=dna_to_rna(dnaString)
+            
+        } else if type == "PROT" {
+            self.title="Protein Translation"
+            seqText.text=dna_to_protein(dnaString)
+        }
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

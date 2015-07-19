@@ -19,6 +19,12 @@ class EditDNASeqViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var descText: UITextField!
     @IBOutlet weak var versionText: UITextField!
     @IBOutlet weak var seqText: UITextView!
+    
+    @IBOutlet weak var toRNAButton: UIBarButtonItem!
+    @IBOutlet weak var toProteinButton: UIBarButtonItem!
+    @IBOutlet weak var kmerProfileButton: UIBarButtonItem!
+    @IBOutlet weak var alignmentButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = saveButtonItem(self.index<0)
@@ -39,6 +45,7 @@ class EditDNASeqViewController: UIViewController,UITextViewDelegate {
         seqText.delegate = self
         
     }
+
     func textFieldDidChange(textField: UITextField) {
         self.saveButton.enabled=true
     }
@@ -70,19 +77,23 @@ class EditDNASeqViewController: UIViewController,UITextViewDelegate {
         }
         
         if hasError {
-            let controller2 = UIAlertController(
-                title:"Error",
-                message: errMsg, preferredStyle: .Alert)
-            let cancelAction = UIAlertAction(title: "OK",
-                style: .Default, handler: nil)
-            controller2.addAction(cancelAction)
-            self.presentViewController(controller2, animated: true,
-                completion: nil)
+            showError(errMsg)
         } else {
             self.saveEdit = true
             self.navigationController?.popViewControllerAnimated(true)
   
         }
+    }
+    
+    func showError(errMsg:String){
+        let controller2 = UIAlertController(
+        title:"Error",
+        message: errMsg, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "OK",
+        style: .Default, handler: nil)
+        controller2.addAction(cancelAction)
+        self.presentViewController(controller2, animated: true,
+        completion: nil)
     }
     
     
@@ -120,14 +131,36 @@ class EditDNASeqViewController: UIViewController,UITextViewDelegate {
     }
 
     
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        if identifier == "RNAtoDNAIdnetifier" ||  identifier == "RNAtoProteinIdnetifier" {
+            if let newSeqText=validateSequence(seqText.text) {
+                seqText.text=newSeqText.uppercaseString
+            } else {
+                let errMsg="Only ACGT or acgt can be in sequence!"
+                showError(errMsg)
+                return false
+            }
+        
+        }
+        // by default, transition
+        return true
     }
-    */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "RNAtoDNAIdnetifier"  ||  segue.identifier == "RNAtoProteinIdnetifier" {
+            let editVC = segue.destinationViewController as! ShowRNAProteinViewController
+            editVC.dnaString=seqText.text
+            if segue.identifier == "RNAtoDNAIdnetifier" {
+                editVC.type="RNA"
+            } else {
+                editVC.type="PROT"
+            }
+            
+        }
+    }
+    
 
 }

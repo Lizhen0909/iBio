@@ -47,7 +47,7 @@
         <!--Details-->
         <scene sceneID="MQh-e6-4RJ">
             <objects>
-                <viewController title="Detail" id="YiP-Yy-8F3" userLabel="Details" customClass="EditDNASeqViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Details" id="YiP-Yy-8F3" userLabel="Details" customClass="EditDNASeqViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I5U-pY-Iec"/>
                         <viewControllerLayoutGuide type="bottom" id="Wt1-uC-lnP"/>
@@ -93,7 +93,7 @@
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="seq" translatesAutoresizingMaskIntoConstraints="NO" id="xiK-su-oJ2">
-                                <rect key="frame" x="16" y="174" width="568" height="421"/>
+                                <rect key="frame" x="16" y="174" width="568" height="384"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" enablesReturnKeyAutomatically="YES"/>
@@ -108,21 +108,47 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-3t-Cvj">
+                                <rect key="frame" x="0.0" y="563" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="cc2-xf-6td"/>
+                                    <constraint firstAttribute="height" constant="44" id="hso-4E-KeY"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="To-RNA" id="1qP-bc-4jP">
+                                        <connections>
+                                            <segue destination="hoh-Ev-Brq" kind="show" identifier="RNAtoDNAIdnetifier" id="6Ad-5E-nDz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ikb-lp-ftl"/>
+                                    <barButtonItem title="To-Protein" id="rEt-iw-QS1">
+                                        <connections>
+                                            <segue destination="hoh-Ev-Brq" kind="show" identifier="RNAtoProteinIdnetifier" id="42B-Fj-vpz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nO6-qO-Wd0"/>
+                                    <barButtonItem title="Kmer-Profile" id="kyL-L7-FBe"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Bgs-4o-vgA"/>
+                                    <barButtonItem title="Alignment" id="UB3-by-Sgz"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8DU-fD-bFI" firstAttribute="width" secondItem="2rx-6p-HhT" secondAttribute="width" id="10T-AE-8Fi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2rx-6p-HhT" secondAttribute="trailing" id="3fU-GK-yXK"/>
-                            <constraint firstItem="Wt1-uC-lnP" firstAttribute="top" secondItem="xiK-su-oJ2" secondAttribute="bottom" constant="5" id="3vn-KV-HAB"/>
                             <constraint firstItem="UJV-Jo-Kph" firstAttribute="width" secondItem="4JF-dR-LU4" secondAttribute="width" id="6fI-NS-gaq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xiK-su-oJ2" secondAttribute="trailing" id="7Lu-OK-DEa"/>
                             <constraint firstItem="2rx-6p-HhT" firstAttribute="leading" secondItem="JH1-da-qtW" secondAttribute="trailing" constant="5" id="7xb-e8-ROP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ru8-3t-Cvj" secondAttribute="bottom" constant="-7" id="8jB-72-kDS"/>
                             <constraint firstItem="4JF-dR-LU4" firstAttribute="top" secondItem="I5U-pY-Iec" secondAttribute="bottom" constant="10" id="AAZ-3r-XMr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ru8-3t-Cvj" secondAttribute="trailing" constant="-16" id="Aht-Rz-U3u"/>
                             <constraint firstItem="xiK-su-oJ2" firstAttribute="top" secondItem="TGM-TR-sXw" secondAttribute="bottom" constant="10" id="JNN-94-55x"/>
                             <constraint firstItem="TGM-TR-sXw" firstAttribute="leading" secondItem="UJV-Jo-Kph" secondAttribute="trailing" constant="5" id="KeT-VV-2E6"/>
                             <constraint firstItem="TGM-TR-sXw" firstAttribute="bottom" secondItem="UJV-Jo-Kph" secondAttribute="bottom" id="LTq-r1-SOO"/>
                             <constraint firstItem="UJV-Jo-Kph" firstAttribute="width" secondItem="JH1-da-qtW" secondAttribute="width" id="LYv-T5-1wL"/>
                             <constraint firstItem="8DU-fD-bFI" firstAttribute="trailing" secondItem="2rx-6p-HhT" secondAttribute="trailing" id="SHY-bn-O9y"/>
+                            <constraint firstItem="ru8-3t-Cvj" firstAttribute="top" secondItem="xiK-su-oJ2" secondAttribute="bottom" constant="5" id="UOW-dB-baX"/>
                             <constraint firstItem="UJV-Jo-Kph" firstAttribute="leading" secondItem="Pf3-CE-H0o" secondAttribute="leadingMargin" id="WLH-Gb-Aq9"/>
                             <constraint firstItem="UJV-Jo-Kph" firstAttribute="height" secondItem="JH1-da-qtW" secondAttribute="height" id="Weo-Go-D18"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TGM-TR-sXw" secondAttribute="trailing" id="XgE-uN-OyE"/>
@@ -133,6 +159,7 @@
                             <constraint firstItem="UJV-Jo-Kph" firstAttribute="trailing" secondItem="4JF-dR-LU4" secondAttribute="trailing" id="qex-w3-pRE"/>
                             <constraint firstItem="TGM-TR-sXw" firstAttribute="height" secondItem="UJV-Jo-Kph" secondAttribute="height" id="rUQ-lj-4sc"/>
                             <constraint firstItem="8DU-fD-bFI" firstAttribute="height" secondItem="4JF-dR-LU4" secondAttribute="height" id="sK2-f6-95a"/>
+                            <constraint firstItem="ru8-3t-Cvj" firstAttribute="leading" secondItem="Pf3-CE-H0o" secondAttribute="leadingMargin" constant="-16" id="sSu-wl-Vp6"/>
                             <constraint firstItem="UJV-Jo-Kph" firstAttribute="height" secondItem="4JF-dR-LU4" secondAttribute="height" id="tZL-8b-0oM"/>
                             <constraint firstItem="UJV-Jo-Kph" firstAttribute="top" secondItem="JH1-da-qtW" secondAttribute="bottom" constant="5" id="usH-3o-0di"/>
                             <constraint firstItem="2rx-6p-HhT" firstAttribute="bottom" secondItem="JH1-da-qtW" secondAttribute="bottom" id="vtW-Sb-JFN"/>
@@ -145,14 +172,54 @@
                     </view>
                     <connections>
                         <outlet property="accessionText" destination="8DU-fD-bFI" id="xAg-4e-5hX"/>
+                        <outlet property="alignmentButton" destination="UB3-by-Sgz" id="rUJ-qk-EqQ"/>
                         <outlet property="descText" destination="TGM-TR-sXw" id="Ukt-I3-wzb"/>
+                        <outlet property="kmerProfileButton" destination="kyL-L7-FBe" id="Yzh-fj-qZa"/>
                         <outlet property="seqText" destination="xiK-su-oJ2" id="SXb-7h-0Aw"/>
+                        <outlet property="toProteinButton" destination="rEt-iw-QS1" id="Vrm-cD-vfI"/>
+                        <outlet property="toRNAButton" destination="1qP-bc-4jP" id="3AZ-Ja-ib1"/>
                         <outlet property="versionText" destination="2rx-6p-HhT" id="Jck-do-nck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSW-3v-wCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1054" y="339"/>
+        </scene>
+        <!--RNAProteinViewer-->
+        <scene sceneID="oZI-HD-pDZ">
+            <objects>
+                <viewController title="RNAProteinViewer" id="hoh-Ev-Brq" customClass="ShowRNAProteinViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x9N-vh-RfR"/>
+                        <viewControllerLayoutGuide type="bottom" id="KMw-jH-Dt9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sIX-Ie-Imk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="text" translatesAutoresizingMaskIntoConstraints="NO" id="G7t-AB-Oun">
+                                <rect key="frame" x="16" y="64" width="568" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.019607843831181526" green="0.08235294371843338" blue="0.97254908084869385" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KMw-jH-Dt9" firstAttribute="top" secondItem="G7t-AB-Oun" secondAttribute="bottom" id="Cyg-U4-1Hy"/>
+                            <constraint firstItem="G7t-AB-Oun" firstAttribute="trailing" secondItem="sIX-Ie-Imk" secondAttribute="trailingMargin" id="Lq2-wn-sfe"/>
+                            <constraint firstItem="G7t-AB-Oun" firstAttribute="top" secondItem="x9N-vh-RfR" secondAttribute="bottom" id="g1X-4Q-s56"/>
+                            <constraint firstItem="G7t-AB-Oun" firstAttribute="leading" secondItem="sIX-Ie-Imk" secondAttribute="leadingMargin" id="xp3-Fk-gQi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="seqText" destination="G7t-AB-Oun" id="elq-yp-H4E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dx6-ok-yAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="1160"/>
         </scene>
         <!--Download Gen Bank View Controller-->
         <scene sceneID="8tG-2q-VzF">
@@ -253,4 +320,7 @@
             <point key="canvasLocation" x="-486" y="339"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="42B-Fj-vpz"/>
+    </inferredMetricsTieBreakers>
 </document>

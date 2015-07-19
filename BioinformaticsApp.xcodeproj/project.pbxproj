@@ -21,6 +21,8 @@
 		1183E4211B5B114100850989 /* EditDNASeqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4201B5B114100850989 /* EditDNASeqViewController.swift */; };
 		1183E4231B5B206B00850989 /* FJ817486.fasta in Resources */ = {isa = PBXBuildFile; fileRef = 1183E4221B5B206B00850989 /* FJ817486.fasta */; };
 		1183E4271B5B4D9400850989 /* DownloadGenBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */; };
+		1183E4291B5C3A8A00850989 /* ShowRNAProteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4281B5C3A8A00850989 /* ShowRNAProteinViewController.swift */; };
+		1183E42B1B5C3F9900850989 /* BioAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E42A1B5C3F9900850989 /* BioAlgorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		1183E4201B5B114100850989 /* EditDNASeqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDNASeqViewController.swift; sourceTree = "<group>"; };
 		1183E4221B5B206B00850989 /* FJ817486.fasta */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FJ817486.fasta; sourceTree = "<group>"; };
 		1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadGenBankViewController.swift; sourceTree = "<group>"; };
+		1183E4281B5C3A8A00850989 /* ShowRNAProteinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRNAProteinViewController.swift; sourceTree = "<group>"; };
+		1183E42A1B5C3F9900850989 /* BioAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 			children = (
 				1183E3F21B5ABA3B00850989 /* AppDelegate.swift */,
 				1183E3F61B5ABA3B00850989 /* Main.storyboard */,
+				1183E4281B5C3A8A00850989 /* ShowRNAProteinViewController.swift */,
+				1183E42A1B5C3F9900850989 /* BioAlgorithm.swift */,
 				1183E3F91B5ABA3B00850989 /* Images.xcassets */,
 				1183E3FB1B5ABA3B00850989 /* LaunchScreen.xib */,
 				1183E3F01B5ABA3B00850989 /* Supporting Files */,
@@ -240,11 +246,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1183E4291B5C3A8A00850989 /* ShowRNAProteinViewController.swift in Sources */,
 				1183E41B1B5AC48D00850989 /* RootTableViewController.swift in Sources */,
 				1183E4171B5AC29C00850989 /* FastaFormat.swift in Sources */,
 				1183E4211B5B114100850989 /* EditDNASeqViewController.swift in Sources */,
 				1183E4271B5B4D9400850989 /* DownloadGenBankViewController.swift in Sources */,
 				1183E41F1B5AD49C00850989 /* DNASeqCell.swift in Sources */,
+				1183E42B1B5C3F9900850989 /* BioAlgorithm.swift in Sources */,
 				1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
