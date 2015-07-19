@@ -54,7 +54,7 @@ class RootTableViewController: UITableViewController {
         let newimage=UIImage(named: "new")
         var newButton = UIBarButtonItem(image: newimage, style: .Plain, target: self, action: Selector("addNewSequence"))
         let downloadimage=UIImage(named: "download")
-        var downloadButton = UIBarButtonItem(image: downloadimage, style: .Plain, target: self, action: Selector("addNewAlbum"))
+        var downloadButton = UIBarButtonItem(image: downloadimage, style: .Plain, target: self, action: Selector("downloadSequence"))
 
         var editButton=editButtonItem()
         //editButton.image=UIImage(named: "edit")
@@ -65,6 +65,11 @@ class RootTableViewController: UITableViewController {
     func addNewSequence() {
         performSegueWithIdentifier("DNASeqDetail", sender: nil)
     }
+    
+    func downloadSequence() {
+        performSegueWithIdentifier("downloadFromGenBank", sender: nil)
+    }
+    
     
     func configureTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -134,7 +139,7 @@ class RootTableViewController: UITableViewController {
             if editingStyle == UITableViewCellEditingStyle.Delete {
                 // Delete the row from the data source
                 sequences.removeAtIndex(indexPath.row)
-                //self.writeToFile(dataFilePath())
+                writeToFile(dataFilePath(),sequences)
                 tableView.deleteRowsAtIndexPaths([indexPath],
                     withRowAnimation: UITableViewRowAnimation.Fade)
             }
@@ -150,18 +155,23 @@ class RootTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        let editVC = segue.destinationViewController as! EditDNASeqViewController
         
-        editVC.rootView=self
-        if (sender != nil){
-            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
-            editVC.index = indexPath.row
-            editVC.sequence = sequenceForDisplay(atIndexPath: indexPath)
+        if segue.identifier == "DNASeqDetail" {
+            let editVC = segue.destinationViewController as! EditDNASeqViewController
+            editVC.rootView=self
+            if (sender != nil){
+                let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+                editVC.index = indexPath.row
+                editVC.sequence = sequenceForDisplay(atIndexPath: indexPath)
+            } else {
+                let seq = DNASequence()
+                editVC.index = -1
+                editVC.sequence = seq
+                
+            }
         } else {
-            let seq = DNASequence()
-            editVC.index = -1
-            editVC.sequence = seq
-            
+            let editVC = segue.destinationViewController as! DownloadGenBankViewController
+            editVC.rootView=self
         }
         
     }

@@ -20,6 +20,7 @@
 		1183E41F1B5AD49C00850989 /* DNASeqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E41E1B5AD49C00850989 /* DNASeqCell.swift */; };
 		1183E4211B5B114100850989 /* EditDNASeqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4201B5B114100850989 /* EditDNASeqViewController.swift */; };
 		1183E4231B5B206B00850989 /* FJ817486.fasta in Resources */ = {isa = PBXBuildFile; fileRef = 1183E4221B5B206B00850989 /* FJ817486.fasta */; };
+		1183E4271B5B4D9400850989 /* DownloadGenBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		1183E41E1B5AD49C00850989 /* DNASeqCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNASeqCell.swift; sourceTree = "<group>"; };
 		1183E4201B5B114100850989 /* EditDNASeqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDNASeqViewController.swift; sourceTree = "<group>"; };
 		1183E4221B5B206B00850989 /* FJ817486.fasta */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FJ817486.fasta; sourceTree = "<group>"; };
+		1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadGenBankViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				1183E41C1B5AD1C400850989 /* DNASeqCell.xib */,
 				1183E41E1B5AD49C00850989 /* DNASeqCell.swift */,
 				1183E4201B5B114100850989 /* EditDNASeqViewController.swift */,
+				1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */,
 			);
 			path = BioinformaticsApp;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				1183E41B1B5AC48D00850989 /* RootTableViewController.swift in Sources */,
 				1183E4171B5AC29C00850989 /* FastaFormat.swift in Sources */,
 				1183E4211B5B114100850989 /* EditDNASeqViewController.swift in Sources */,
+				1183E4271B5B4D9400850989 /* DownloadGenBankViewController.swift in Sources */,
 				1183E41F1B5AD49C00850989 /* DNASeqCell.swift in Sources */,
 				1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */,
 			);

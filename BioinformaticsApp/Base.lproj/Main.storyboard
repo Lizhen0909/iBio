@@ -20,7 +20,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="YiP-Yy-8F3" kind="show" identifier="DNASeqDetail" id="Gdh-7s-mVS"/>
+                                    <segue destination="YiP-Yy-8F3" kind="show" identifier="DNASeqDetail" id="FL6-cR-Bac"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="non-sense" id="Ojs-Bh-cuO">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ojs-Bh-cuO" id="mRR-mY-eEz">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yvX-Sf-mdR" kind="presentation" identifier="downloadFromGenBank" modalPresentationStyle="pageSheet" id="0H4-NC-XFQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -144,6 +153,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSW-3v-wCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1054" y="339"/>
+        </scene>
+        <!--Download Gen Bank View Controller-->
+        <scene sceneID="8tG-2q-VzF">
+            <objects>
+                <viewController id="yvX-Sf-mdR" customClass="DownloadGenBankViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K68-u2-xzp"/>
+                        <viewControllerLayoutGuide type="bottom" id="xD5-ci-bmu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YBZ-6O-61p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GenBank Accession:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQH-fn-zm7">
+                                <rect key="frame" x="21" y="30" width="143" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JX914595" borderStyle="roundedRect" placeholder="JX914595" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="0jg-n9-MNh">
+                                <rect key="frame" x="174" y="30" width="410" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRn-U5-eZY" userLabel="Download">
+                                <rect key="frame" x="207" y="118" width="90" height="29"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadPressed:" destination="yvX-Sf-mdR" eventType="touchUpInside" id="zXv-vn-OlN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQv-yy-hZ7">
+                                <rect key="frame" x="333" y="118" width="90" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="7Ga-Ix-ZyQ"/>
+                                    <constraint firstAttribute="height" constant="29" id="o5l-5Y-o1U"/>
+                                </constraints>
+                                <state key="normal" title="Cancle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="yvX-Sf-mdR" eventType="touchUpInside" id="FnY-JE-3PF"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Og-58-jvq">
+                                <rect key="frame" x="297" y="81" width="36" height="138"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="DFz-yH-BlE"/>
+                                    <constraint firstAttribute="width" constant="36" id="Zng-vW-zk0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0jg-n9-MNh" firstAttribute="bottom" secondItem="QQH-fn-zm7" secondAttribute="bottom" id="4cd-dP-1oA"/>
+                            <constraint firstItem="LRn-U5-eZY" firstAttribute="bottom" secondItem="GQv-yy-hZ7" secondAttribute="bottom" id="7sy-Gk-PZi"/>
+                            <constraint firstItem="5Og-58-jvq" firstAttribute="leading" secondItem="LRn-U5-eZY" secondAttribute="trailing" id="FvH-fc-8U6"/>
+                            <constraint firstItem="LRn-U5-eZY" firstAttribute="height" secondItem="GQv-yy-hZ7" secondAttribute="height" id="JfQ-O0-piB"/>
+                            <constraint firstItem="LRn-U5-eZY" firstAttribute="top" secondItem="0jg-n9-MNh" secondAttribute="bottom" constant="58" id="Krk-YO-0qH"/>
+                            <constraint firstItem="5Og-58-jvq" firstAttribute="top" secondItem="0jg-n9-MNh" secondAttribute="bottom" constant="21" id="NnA-bx-LdH"/>
+                            <constraint firstItem="QQH-fn-zm7" firstAttribute="top" secondItem="K68-u2-xzp" secondAttribute="bottom" constant="30" id="YVl-HE-xkQ"/>
+                            <constraint firstAttribute="centerX" secondItem="5Og-58-jvq" secondAttribute="centerX" constant="-15" id="YvN-jC-Kql"/>
+                            <constraint firstItem="GQv-yy-hZ7" firstAttribute="leading" secondItem="5Og-58-jvq" secondAttribute="trailing" id="Zhb-a4-uqi"/>
+                            <constraint firstItem="0jg-n9-MNh" firstAttribute="leading" secondItem="QQH-fn-zm7" secondAttribute="trailing" constant="10" id="e6X-pc-498"/>
+                            <constraint firstItem="LRn-U5-eZY" firstAttribute="width" secondItem="GQv-yy-hZ7" secondAttribute="width" id="fVw-V6-VOI"/>
+                            <constraint firstItem="0jg-n9-MNh" firstAttribute="height" secondItem="QQH-fn-zm7" secondAttribute="height" id="mpp-Fu-Wwl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0jg-n9-MNh" secondAttribute="trailing" id="qa8-ZU-upF"/>
+                            <constraint firstItem="QQH-fn-zm7" firstAttribute="leading" secondItem="YBZ-6O-61p" secondAttribute="leadingMargin" constant="5" id="ueB-PV-4ZA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accessionText" destination="0jg-n9-MNh" id="wPi-41-TWY"/>
+                        <outlet property="cancelButton" destination="GQv-yy-hZ7" id="8Va-Fh-SFG"/>
+                        <outlet property="downloadButton" destination="LRn-U5-eZY" id="DcK-x1-yP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2X-Ma-Gpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="1031"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mDz-4d-biE">
