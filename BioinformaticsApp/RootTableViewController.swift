@@ -10,7 +10,7 @@ import UIKit
 
 class RootTableViewController: UITableViewController {
 
-    private var sequences : [DNASequence]!
+    var sequences : [DNASequence]!
     
     let seqTableIdentifier = "seqTableIdentifier"
     
@@ -24,26 +24,55 @@ class RootTableViewController: UITableViewController {
         tableView.registerNib(nib,
             forCellReuseIdentifier: seqTableIdentifier)
             
-        sequences=[]
-        sequences.append(readFastaEmbeded("JX069768"))
-        sequences.append(readFastaEmbeded("JX469983"))
+
         
+        let filePath = dataFilePath()
+        if (NSFileManager.defaultManager().fileExistsAtPath(filePath)) {
+          sequences=readFromFile(filePath)
+        } else{
+            sequences=[]
+            sequences.append(readFastaEmbeded("JX069768"))
+            sequences.append(readFastaEmbeded("JX469983"))
+            sequences.append(readFastaEmbeded("FJ817486"))
+            writeToFile(filePath, self.sequences)
+        }
+        
+        let app = UIApplication.sharedApplication()
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "applicationWillResignActive:",
+            name: UIApplicationWillResignActiveNotification,
+            object: app)
+        
+    }
+    
+    func applicationWillResignActive(notification:NSNotification) {
+        let filePath = dataFilePath()
+        writeToFile(filePath,self.sequences)
     }
     
     func configNavigationItems(){
         let newimage=UIImage(named: "new")
-        var newButton = UIBarButtonItem(image: newimage, style: .Plain, target: self, action: Selector("addNewAlbum"))
+        var newButton = UIBarButtonItem(image: newimage, style: .Plain, target: self, action: Selector("addNewSequence"))
         let downloadimage=UIImage(named: "download")
         var downloadButton = UIBarButtonItem(image: downloadimage, style: .Plain, target: self, action: Selector("addNewAlbum"))
 
         var editButton=editButtonItem()
-        editButton.image=UIImage(named: "edit")
+        //editButton.image=UIImage(named: "edit")
         self.navigationItem.setLeftBarButtonItems([newButton,downloadButton], animated: false)
         self.navigationItem.setRightBarButtonItems([editButton], animated: false)
     }
     
+    func addNewSequence() {
+        performSegueWithIdentifier("DNASeqDetail", sender: nil)
+    }
+    
     func configureTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    
+    func reload() {
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +80,10 @@ class RootTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.reload()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -89,49 +122,48 @@ class RootTableViewController: UITableViewController {
     }
 
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let sender = tableView.cellForRowAtIndexPath(indexPath)
+        performSegueWithIdentifier("DNASeqDetail", sender: sender)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func tableView(tableView: UITableView,
+        commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+        forRowAtIndexPath indexPath: NSIndexPath) {
+            
+            if editingStyle == UITableViewCellEditingStyle.Delete {
+                // Delete the row from the data source
+                sequences.removeAtIndex(indexPath.row)
+                //self.writeToFile(dataFilePath())
+                tableView.deleteRowsAtIndexPaths([indexPath],
+                    withRowAnimation: UITableViewRowAnimation.Fade)
+            }
     }
-    */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
+    // MARK: Navigation
+    
+    func sequenceForDisplay(atIndexPath indexPath: NSIndexPath) -> DNASequence {
+        return sequences[indexPath.row]
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        let editVC = segue.destinationViewController as! EditDNASeqViewController
+        
+        editVC.rootView=self
+        if (sender != nil){
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+            editVC.index = indexPath.row
+            editVC.sequence = sequenceForDisplay(atIndexPath: indexPath)
+        } else {
+            let seq = DNASequence()
+            editVC.index = -1
+            editVC.sequence = seq
+            
+        }
+        
     }
-    */
 
 }

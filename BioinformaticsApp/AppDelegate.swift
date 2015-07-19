@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BioinformaticsApp
 //
-//  Created by Bo Chen on 7/18/15.
+//  Created by Lizhen Shi on 7/18/15.
 //  Copyright (c) 2015 Lizhen Shi. All rights reserved.
 //
 
