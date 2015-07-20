@@ -390,17 +390,21 @@
         <!--chart-->
         <scene sceneID="ShZ-QG-ncI">
             <objects>
-                <viewController title="chart" id="y1l-Sa-LLc" sceneMemberID="viewController">
+                <viewController title="chart" id="y1l-Sa-LLc" customClass="KmerChartViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cy-Re-pUr"/>
                         <viewControllerLayoutGuide type="bottom" id="ldg-8y-AGt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TRU-rz-V2X">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="TRU-rz-V2X" customClass="BarChartView" customModule="Charts">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chart" image="chart" selectedImage="chart" id="b90-0z-pVs"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Chart" image="chart" id="b90-0z-pVs"/>
+                    <connections>
+                        <outlet property="barChartView" destination="TRU-rz-V2X" id="h1b-11-fIH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5z9-bd-1Az" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

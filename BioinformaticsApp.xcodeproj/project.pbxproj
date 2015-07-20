@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1156BA0A1B5D5E6700508B4B /* KmerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA091B5D5E6700508B4B /* KmerProfileViewController.swift */; };
+		1156BA111B5D6B0900508B4B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1156BA101B5D6ABE00508B4B /* Charts.framework */; };
+		1156BA121B5D6B0900508B4B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1156BA101B5D6ABE00508B4B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1156BA171B5D6B6A00508B4B /* KmerChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA161B5D6B6A00508B4B /* KmerChartViewController.swift */; };
 		1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E3F21B5ABA3B00850989 /* AppDelegate.swift */; };
 		1183E3F81B5ABA3B00850989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3F61B5ABA3B00850989 /* Main.storyboard */; };
 		1183E3FA1B5ABA3B00850989 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3F91B5ABA3B00850989 /* Images.xcassets */; };
@@ -30,6 +33,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1156BA0F1B5D6ABE00508B4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1156BA0B1B5D6ABE00508B4B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+		1156BA131B5D6B0900508B4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1156BA0B1B5D6ABE00508B4B /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
 		1183E4031B5ABA3B00850989 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1183E3E51B5ABA3A00850989 /* Project object */;
@@ -39,8 +56,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1156BA151B5D6B0900508B4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1156BA121B5D6B0900508B4B /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1156BA091B5D5E6700508B4B /* KmerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KmerProfileViewController.swift; sourceTree = "<group>"; };
+		1156BA0B1B5D6ABE00508B4B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		1156BA161B5D6B6A00508B4B /* KmerChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KmerChartViewController.swift; sourceTree = "<group>"; };
 		1183E3ED1B5ABA3B00850989 /* BioinformaticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioinformaticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1183E3F11B5ABA3B00850989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1183E3F21B5ABA3B00850989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1156BA111B5D6B0900508B4B /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +118,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1156BA0C1B5D6ABE00508B4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1156BA101B5D6ABE00508B4B /* Charts.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1183E3E41B5ABA3A00850989 = {
 			isa = PBXGroup;
 			children = (
+				1156BA0B1B5D6ABE00508B4B /* Charts.xcodeproj */,
 				1183E3EF1B5ABA3B00850989 /* BioinformaticsApp */,
 				1183E4051B5ABA3B00850989 /* BioinformaticsAppTests */,
 				1183E3EE1B5ABA3B00850989 /* Products */,
@@ -125,6 +168,7 @@
 				1183E41E1B5AD49C00850989 /* DNASeqCell.swift */,
 				1183E4201B5B114100850989 /* EditDNASeqViewController.swift */,
 				1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */,
+				1156BA161B5D6B6A00508B4B /* KmerChartViewController.swift */,
 			);
 			path = BioinformaticsApp;
 			sourceTree = "<group>";
@@ -164,10 +208,12 @@
 				1183E3E91B5ABA3B00850989 /* Sources */,
 				1183E3EA1B5ABA3B00850989 /* Frameworks */,
 				1183E3EB1B5ABA3B00850989 /* Resources */,
+				1156BA151B5D6B0900508B4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1156BA141B5D6B0900508B4B /* PBXTargetDependency */,
 			);
 			name = BioinformaticsApp;
 			productName = BioinformaticsApp;
@@ -221,6 +267,12 @@
 			mainGroup = 1183E3E41B5ABA3A00850989;
 			productRefGroup = 1183E3EE1B5ABA3B00850989 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1156BA0C1B5D6ABE00508B4B /* Products */;
+					ProjectRef = 1156BA0B1B5D6ABE00508B4B /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1183E3EC1B5ABA3B00850989 /* BioinformaticsApp */,
@@ -228,6 +280,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1156BA101B5D6ABE00508B4B /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 1156BA0F1B5D6ABE00508B4B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1183E3EB1B5ABA3B00850989 /* Resources */ = {
@@ -259,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1183E4291B5C3A8A00850989 /* ShowRNAProteinViewController.swift in Sources */,
+				1156BA171B5D6B6A00508B4B /* KmerChartViewController.swift in Sources */,
 				1183E41B1B5AC48D00850989 /* RootTableViewController.swift in Sources */,
 				1183E4171B5AC29C00850989 /* FastaFormat.swift in Sources */,
 				1183E4211B5B114100850989 /* EditDNASeqViewController.swift in Sources */,
@@ -284,6 +347,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1156BA141B5D6B0900508B4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 1156BA131B5D6B0900508B4B /* PBXContainerItemProxy */;
+		};
 		1183E4041B5ABA3B00850989 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1183E3EC1B5ABA3B00850989 /* BioinformaticsApp */;

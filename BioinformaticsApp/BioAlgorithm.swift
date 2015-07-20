@@ -103,7 +103,7 @@ func kmer_count(kmers:[String])->[String:Int]{
 
 func kmer_profile(kmers:[String])->[Int:Float]{
     let countMap=kmer_count(kmers)
-    let length=Float(kmers.count)
+    let length=Float(countMap.count)
     var profileMap = [Int:Float]()
     for (kmer,cnt) in countMap {
         if let val=profileMap[cnt] {
