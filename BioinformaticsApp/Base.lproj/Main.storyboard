@@ -127,7 +127,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nO6-qO-Wd0"/>
-                                    <barButtonItem title="Kmer-Profile" id="kyL-L7-FBe"/>
+                                    <barButtonItem title="Kmer-Profile" id="kyL-L7-FBe">
+                                        <connections>
+                                            <segue destination="fIZ-OE-cC5" kind="show" identifier="kmerProfileIdentifier" id="kaJ-Qb-iZS"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Bgs-4o-vgA"/>
                                     <barButtonItem title="Alignment" id="UB3-by-Sgz"/>
                                 </items>
@@ -220,6 +224,211 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx6-ok-yAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973" y="1160"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="xOL-Qf-lUt">
+            <objects>
+                <viewController title="Settings" id="8oD-2l-58o" customClass="KmerSettingsViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bw8-ZP-5Ay"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZFB-YR-P3B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Osr-tK-JDp" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kmer size:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-As-bKm">
+                                <rect key="frame" x="16" y="72" width="438" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="roundedRect" placeholder="4" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1t-WD-cTg">
+                                <rect key="frame" x="464" y="72" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Y0t-q2-hU8"/>
+                                    <constraint firstAttribute="height" constant="30" id="vz1-4C-Ml7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="8oD-2l-58o" eventType="editingDidEndOnExit" id="Gui-Tb-dQC"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w6-Bw-vIs">
+                                <rect key="frame" x="524" y="72" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="VWr-eu-Wgk"/>
+                                </constraints>
+                                <state key="normal" title="Update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updatePressed:" destination="8oD-2l-58o" eventType="touchUpInside" id="wzv-4u-BGC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="text" translatesAutoresizingMaskIntoConstraints="NO" id="nMt-Yf-34H">
+                                <rect key="frame" x="16" y="107" width="568" height="439"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.019607843829999999" green="0.082352943720000002" blue="0.97254908080000002" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y1t-WD-cTg" firstAttribute="leading" secondItem="a6d-As-bKm" secondAttribute="trailing" constant="10" id="2LA-8x-Jlm"/>
+                            <constraint firstItem="y1t-WD-cTg" firstAttribute="top" secondItem="bw8-ZP-5Ay" secondAttribute="bottom" constant="8" id="DFs-j3-3CX"/>
+                            <constraint firstItem="ZFB-YR-P3B" firstAttribute="top" secondItem="nMt-Yf-34H" secondAttribute="bottom" constant="5" id="H1W-kM-cbT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2w6-Bw-vIs" secondAttribute="trailing" id="Isk-pD-Lbd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nMt-Yf-34H" secondAttribute="trailing" id="JUY-DW-1kj"/>
+                            <constraint firstItem="a6d-As-bKm" firstAttribute="bottom" secondItem="y1t-WD-cTg" secondAttribute="bottom" id="Kex-WF-wb8"/>
+                            <constraint firstItem="nMt-Yf-34H" firstAttribute="leading" secondItem="Osr-tK-JDp" secondAttribute="leadingMargin" id="Mtt-hh-nfB"/>
+                            <constraint firstItem="a6d-As-bKm" firstAttribute="leading" secondItem="Osr-tK-JDp" secondAttribute="leadingMargin" id="Yns-xm-fiL"/>
+                            <constraint firstItem="2w6-Bw-vIs" firstAttribute="leading" secondItem="y1t-WD-cTg" secondAttribute="trailing" constant="20" id="bsv-7F-2Ur"/>
+                            <constraint firstItem="a6d-As-bKm" firstAttribute="height" secondItem="y1t-WD-cTg" secondAttribute="height" id="dOr-rt-KcT"/>
+                            <constraint firstItem="nMt-Yf-34H" firstAttribute="top" secondItem="2w6-Bw-vIs" secondAttribute="bottom" constant="5" id="efo-u8-Xmf"/>
+                            <constraint firstItem="y1t-WD-cTg" firstAttribute="height" secondItem="2w6-Bw-vIs" secondAttribute="height" id="r1w-PS-m5b"/>
+                            <constraint firstItem="y1t-WD-cTg" firstAttribute="bottom" secondItem="2w6-Bw-vIs" secondAttribute="bottom" id="uRy-dC-NVD"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="8oD-2l-58o" eventType="touchDown" id="BLJ-Uy-Nmf"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="lmL-Yb-yDn"/>
+                    <connections>
+                        <outlet property="kmerSizeText" destination="y1t-WD-cTg" id="hmg-oh-dFQ"/>
+                        <outlet property="seqText" destination="nMt-Yf-34H" id="5eA-UC-V4c"/>
+                        <outlet property="updateButton" destination="2w6-Bw-vIs" id="z58-pK-2Np"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MB2-et-pbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077" y="1936"/>
+        </scene>
+        <!--k-mer Freq-->
+        <scene sceneID="e6X-dF-98H">
+            <objects>
+                <tableViewController title="k-mer Freq" id="Yj8-ok-CLr" customClass="KmerFreqViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="35" sectionHeaderHeight="22" sectionFooterHeight="22" id="IcT-Ft-N52">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kmerFreqTableIdentifier" textLabel="TGf-Mb-ATI" detailTextLabel="4Hu-la-f5y" rowHeight="35" style="IBUITableViewCellStyleValue1" id="r0c-O6-5qJ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r0c-O6-5qJ" id="xQb-vs-6Q5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TGf-Mb-ATI">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Hu-la-f5y">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="13"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yj8-ok-CLr" id="WPe-Bh-fFi"/>
+                            <outlet property="delegate" destination="Yj8-ok-CLr" id="nR5-fS-ueG"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="k-mer Freq" image="freq" id="CEm-zQ-fa9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqV-eZ-LsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="1936"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="wPK-Ix-JqJ">
+            <objects>
+                <tableViewController id="CII-c6-lfe" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="s5A-FS-USs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="qp6-qV-8yZ" detailTextLabel="De4-kw-X2O" style="IBUITableViewCellStyleValue1" id="e6z-lN-S2z">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e6z-lN-S2z" id="pVh-5F-ziE">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qp6-qV-8yZ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="De4-kw-X2O">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CII-c6-lfe" id="aD3-Ty-7NW"/>
+                            <outlet property="delegate" destination="CII-c6-lfe" id="XX4-VF-yjP"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="19N-El-MMi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7n-Rt-dln" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2387" y="1936"/>
+        </scene>
+        <!--chart-->
+        <scene sceneID="ShZ-QG-ncI">
+            <objects>
+                <viewController title="chart" id="y1l-Sa-LLc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7cy-Re-pUr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ldg-8y-AGt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TRU-rz-V2X">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chart" image="chart" selectedImage="chart" id="b90-0z-pVs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5z9-bd-1Az" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3050" y="1936"/>
+        </scene>
+        <!--k-mer Profile-->
+        <scene sceneID="VHR-jY-64r">
+            <objects>
+                <tabBarController title="k-mer Profile" id="fIZ-OE-cC5" customClass="KmerTabViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Zaz-Rc-XkO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8oD-2l-58o" kind="relationship" relationship="viewControllers" id="vqk-tQ-8kL"/>
+                        <segue destination="Yj8-ok-CLr" kind="relationship" relationship="viewControllers" id="7WA-J3-7zT"/>
+                        <segue destination="CII-c6-lfe" kind="relationship" relationship="viewControllers" id="CLU-Fv-Om5"/>
+                        <segue destination="y1l-Sa-LLc" kind="relationship" relationship="viewControllers" id="X7N-K7-Hjm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgR-xq-mIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="1160"/>
         </scene>
         <!--Download Gen Bank View Controller-->
         <scene sceneID="8tG-2q-VzF">
@@ -320,6 +529,12 @@
             <point key="canvasLocation" x="-486" y="339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chart" width="24" height="24"/>
+        <image name="freq" width="24" height="24"/>
+        <image name="profile" width="24" height="24"/>
+        <image name="settings" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="42B-Fj-vpz"/>
     </inferredMetricsTieBreakers>

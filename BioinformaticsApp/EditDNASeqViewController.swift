@@ -135,7 +135,7 @@ class EditDNASeqViewController: UIViewController,UITextViewDelegate {
     // MARK: - Navigation
     
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if identifier == "RNAtoDNAIdnetifier" ||  identifier == "RNAtoProteinIdnetifier" {
+         
             if let newSeqText=validateSequence(seqText.text) {
                 seqText.text=newSeqText.uppercaseString
             } else {
@@ -144,7 +144,7 @@ class EditDNASeqViewController: UIViewController,UITextViewDelegate {
                 return false
             }
         
-        }
+         
         // by default, transition
         return true
     }
@@ -158,6 +158,10 @@ class EditDNASeqViewController: UIViewController,UITextViewDelegate {
             } else {
                 editVC.type="PROT"
             }
+            
+        } else if segue.identifier == "kmerProfileIdentifier" {
+            let editVC = segue.destinationViewController as! KmerTabViewController
+            editVC.dnaString=seqText.text
             
         }
     }

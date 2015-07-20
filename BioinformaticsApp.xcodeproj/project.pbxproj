@@ -23,6 +23,9 @@
 		1183E4271B5B4D9400850989 /* DownloadGenBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */; };
 		1183E4291B5C3A8A00850989 /* ShowRNAProteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4281B5C3A8A00850989 /* ShowRNAProteinViewController.swift */; };
 		1183E42B1B5C3F9900850989 /* BioAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E42A1B5C3F9900850989 /* BioAlgorithm.swift */; };
+		1183E42D1B5C873000850989 /* KmerSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E42C1B5C873000850989 /* KmerSettingsViewController.swift */; };
+		1183E42F1B5C8C8000850989 /* KmerTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E42E1B5C8C8000850989 /* KmerTabViewController.swift */; };
+		1183E4311B5C92CF00850989 /* KmerFreqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E4301B5C92CF00850989 /* KmerFreqViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadGenBankViewController.swift; sourceTree = "<group>"; };
 		1183E4281B5C3A8A00850989 /* ShowRNAProteinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRNAProteinViewController.swift; sourceTree = "<group>"; };
 		1183E42A1B5C3F9900850989 /* BioAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioAlgorithm.swift; sourceTree = "<group>"; };
+		1183E42C1B5C873000850989 /* KmerSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KmerSettingsViewController.swift; sourceTree = "<group>"; };
+		1183E42E1B5C8C8000850989 /* KmerTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KmerTabViewController.swift; sourceTree = "<group>"; };
+		1183E4301B5C92CF00850989 /* KmerFreqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KmerFreqViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +105,11 @@
 			children = (
 				1183E3F21B5ABA3B00850989 /* AppDelegate.swift */,
 				1183E3F61B5ABA3B00850989 /* Main.storyboard */,
+				1183E4301B5C92CF00850989 /* KmerFreqViewController.swift */,
+				1183E42C1B5C873000850989 /* KmerSettingsViewController.swift */,
 				1183E4281B5C3A8A00850989 /* ShowRNAProteinViewController.swift */,
 				1183E42A1B5C3F9900850989 /* BioAlgorithm.swift */,
+				1183E42E1B5C8C8000850989 /* KmerTabViewController.swift */,
 				1183E3F91B5ABA3B00850989 /* Images.xcassets */,
 				1183E3FB1B5ABA3B00850989 /* LaunchScreen.xib */,
 				1183E3F01B5ABA3B00850989 /* Supporting Files */,
@@ -251,8 +260,11 @@
 				1183E4171B5AC29C00850989 /* FastaFormat.swift in Sources */,
 				1183E4211B5B114100850989 /* EditDNASeqViewController.swift in Sources */,
 				1183E4271B5B4D9400850989 /* DownloadGenBankViewController.swift in Sources */,
+				1183E42F1B5C8C8000850989 /* KmerTabViewController.swift in Sources */,
 				1183E41F1B5AD49C00850989 /* DNASeqCell.swift in Sources */,
 				1183E42B1B5C3F9900850989 /* BioAlgorithm.swift in Sources */,
+				1183E4311B5C92CF00850989 /* KmerFreqViewController.swift in Sources */,
+				1183E42D1B5C873000850989 /* KmerSettingsViewController.swift in Sources */,
 				1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

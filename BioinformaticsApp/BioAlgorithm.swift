@@ -42,3 +42,49 @@ func dna_to_protein(seq: String)->String{
     }
     return protein
 }
+
+
+func kmer_generate(kmersize: Int, seqString:String)->[String] {
+    let seq = seqString as NSString
+    var i=0
+    var kmer=""
+    var kmerList:[String]=[]
+    for i in 0..<(count(seqString)-kmersize+1) {
+        kmerList.append(seq.substringWithRange(NSRange(location: i, length: kmersize)))
+    }
+    return kmerList
+}
+
+
+func kmer_reverse_complement(kmer:String)->String {
+    let mapping:[Character:Character] = ["A":"T", "T":"A", "C":"G", "G":"C"]
+    var compKmer=""
+    for char in reverse(kmer) {
+        compKmer.append(mapping[char]!)
+    }
+    return compKmer
+}
+
+func kmer_less_complement(kmer:String)->String {
+    let revComp=kmer_reverse_complement(kmer)
+    if kmer>revComp {
+        return revComp
+    } else {
+        return kmer
+    }
+}
+
+func kmer_freq(kmers:[String])->[String:Float]{
+    var freqMap = [String:Float]()
+    let length=Float(kmers.count)
+    for kmer in kmers {
+        let lessKmer=kmer_less_complement(kmer)
+        if let val=freqMap[lessKmer] {
+            freqMap[lessKmer] = freqMap[lessKmer]! + 1.0/length
+        } else {
+            freqMap[lessKmer] = 1.0/length
+        }
+    }
+    return freqMap
+    
+}
