@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1156BA0A1B5D5E6700508B4B /* KmerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA091B5D5E6700508B4B /* KmerProfileViewController.swift */; };
 		1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E3F21B5ABA3B00850989 /* AppDelegate.swift */; };
 		1183E3F81B5ABA3B00850989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3F61B5ABA3B00850989 /* Main.storyboard */; };
 		1183E3FA1B5ABA3B00850989 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3F91B5ABA3B00850989 /* Images.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1156BA091B5D5E6700508B4B /* KmerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KmerProfileViewController.swift; sourceTree = "<group>"; };
 		1183E3ED1B5ABA3B00850989 /* BioinformaticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioinformaticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1183E3F11B5ABA3B00850989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1183E3F21B5ABA3B00850989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				1183E3F21B5ABA3B00850989 /* AppDelegate.swift */,
 				1183E3F61B5ABA3B00850989 /* Main.storyboard */,
 				1183E4301B5C92CF00850989 /* KmerFreqViewController.swift */,
+				1156BA091B5D5E6700508B4B /* KmerProfileViewController.swift */,
 				1183E42C1B5C873000850989 /* KmerSettingsViewController.swift */,
 				1183E4281B5C3A8A00850989 /* ShowRNAProteinViewController.swift */,
 				1183E42A1B5C3F9900850989 /* BioAlgorithm.swift */,
@@ -264,6 +267,7 @@
 				1183E41F1B5AD49C00850989 /* DNASeqCell.swift in Sources */,
 				1183E42B1B5C3F9900850989 /* BioAlgorithm.swift in Sources */,
 				1183E4311B5C92CF00850989 /* KmerFreqViewController.swift in Sources */,
+				1156BA0A1B5D5E6700508B4B /* KmerProfileViewController.swift in Sources */,
 				1183E42D1B5C873000850989 /* KmerSettingsViewController.swift in Sources */,
 				1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */,
 			);

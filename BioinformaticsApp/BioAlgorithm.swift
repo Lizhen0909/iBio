@@ -80,11 +80,55 @@ func kmer_freq(kmers:[String])->[String:Float]{
     for kmer in kmers {
         let lessKmer=kmer_less_complement(kmer)
         if let val=freqMap[lessKmer] {
-            freqMap[lessKmer] = freqMap[lessKmer]! + 1.0/length
+            freqMap[lessKmer] = val + 1.0/length
         } else {
             freqMap[lessKmer] = 1.0/length
         }
     }
     return freqMap
-    
 }
+
+func kmer_count(kmers:[String])->[String:Int]{
+    var countMap = [String:Int]()
+    for kmer in kmers {
+        let lessKmer=kmer_less_complement(kmer)
+        if let val=countMap[lessKmer] {
+            countMap[lessKmer] = val + 1
+        } else {
+            countMap[lessKmer] = 1
+        }
+    }
+    return countMap
+}
+
+func kmer_profile(kmers:[String])->[Int:Float]{
+    let countMap=kmer_count(kmers)
+    let length=Float(kmers.count)
+    var profileMap = [Int:Float]()
+    for (kmer,cnt) in countMap {
+        if let val=profileMap[cnt] {
+            profileMap[cnt] = val + 1.0/length
+        } else {
+            profileMap[cnt] = 1.0/length
+        }
+    }
+    return profileMap
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
