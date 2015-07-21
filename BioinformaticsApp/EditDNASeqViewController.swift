@@ -163,7 +163,12 @@ class EditDNASeqViewController: UIViewController,UITextViewDelegate {
             let editVC = segue.destinationViewController as! KmerTabViewController
             editVC.dnaString=seqText.text
             
+        }else if segue.identifier == "kmerAlignmentIdentifier" {
+            let editVC = segue.destinationViewController as! AlignmentSettingsViewController
+            editVC.this_sequence=self.sequence
+            editVC.all_sequences=rootView.sequences
         }
+        
     }
     
 

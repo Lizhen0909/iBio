@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+import BioinformaticsApp
 
 class BioinformaticsAppTests: XCTestCase {
     
@@ -24,6 +25,30 @@ class BioinformaticsAppTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
+    }
+    
+    func testGlobalAlignment() {
+
+        let s1="PLEASANTLY"
+        let s2="MEANLY"
+        let ga = GlobalAlignment(s1:s1, s2:s2, scorefun: BLOSUM62, gap: -5)
+        let (score,align1,align2)=ga.eval()
+        
+        XCTAssertEqual(score,8, "Pass")
+        XCTAssertEqual(align1,"PLEASANTLY", "Pass")
+        XCTAssertEqual(align2,"-MEA--N-LY", "Pass")
+    }
+    
+    func testLocalAlignment() {
+        
+        let s1="MEANLY"
+        let s2="PENALTY"
+        let ga = LocalAlignment(s1:s1, s2:s2, scorefun: PAM250, gap: -5)
+        let (score,align1,align2)=ga.eval()
+        
+        XCTAssertEqual(score,15, "Pass")
+        XCTAssertEqual(align1,"EANL-Y", "Pass")
+        XCTAssertEqual(align2,"ENALTY", "Pass")
     }
     
     func testPerformanceExample() {

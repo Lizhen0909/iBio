@@ -11,6 +11,13 @@
 		1156BA111B5D6B0900508B4B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1156BA101B5D6ABE00508B4B /* Charts.framework */; };
 		1156BA121B5D6B0900508B4B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1156BA101B5D6ABE00508B4B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1156BA171B5D6B6A00508B4B /* KmerChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA161B5D6B6A00508B4B /* KmerChartViewController.swift */; };
+		1156BA191B5D78D300508B4B /* AlignmentSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA181B5D78D300508B4B /* AlignmentSettingsViewController.swift */; };
+		1156BA1B1B5D856600508B4B /* AlignmentChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA1A1B5D856600508B4B /* AlignmentChooseViewController.swift */; };
+		1156BA1D1B5D8E7B00508B4B /* AlignmentResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA1C1B5D8E7B00508B4B /* AlignmentResultViewController.swift */; };
+		1156BA1F1B5D927300508B4B /* AlignmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1156BA1E1B5D927300508B4B /* AlignmentCell.xib */; };
+		1156BA211B5D957900508B4B /* AlignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA201B5D957900508B4B /* AlignmentCell.swift */; };
+		1156BA231B5D9C1500508B4B /* LocalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA221B5D9C1500508B4B /* LocalAlignment.swift */; };
+		1156BA261B5DC41300508B4B /* GlobalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156BA241B5DABDB00508B4B /* GlobalAlignment.swift */; };
 		1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E3F21B5ABA3B00850989 /* AppDelegate.swift */; };
 		1183E3F81B5ABA3B00850989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3F61B5ABA3B00850989 /* Main.storyboard */; };
 		1183E3FA1B5ABA3B00850989 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3F91B5ABA3B00850989 /* Images.xcassets */; };
@@ -74,6 +81,13 @@
 		1156BA091B5D5E6700508B4B /* KmerProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KmerProfileViewController.swift; sourceTree = "<group>"; };
 		1156BA0B1B5D6ABE00508B4B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		1156BA161B5D6B6A00508B4B /* KmerChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KmerChartViewController.swift; sourceTree = "<group>"; };
+		1156BA181B5D78D300508B4B /* AlignmentSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignmentSettingsViewController.swift; sourceTree = "<group>"; };
+		1156BA1A1B5D856600508B4B /* AlignmentChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignmentChooseViewController.swift; sourceTree = "<group>"; };
+		1156BA1C1B5D8E7B00508B4B /* AlignmentResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignmentResultViewController.swift; sourceTree = "<group>"; };
+		1156BA1E1B5D927300508B4B /* AlignmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlignmentCell.xib; sourceTree = "<group>"; };
+		1156BA201B5D957900508B4B /* AlignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignmentCell.swift; sourceTree = "<group>"; };
+		1156BA221B5D9C1500508B4B /* LocalAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalAlignment.swift; sourceTree = "<group>"; };
+		1156BA241B5DABDB00508B4B /* GlobalAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalAlignment.swift; path = BioinformaticsAppTests/GlobalAlignment.swift; sourceTree = SOURCE_ROOT; };
 		1183E3ED1B5ABA3B00850989 /* BioinformaticsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioinformaticsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1183E3F11B5ABA3B00850989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1183E3F21B5ABA3B00850989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,25 +164,32 @@
 			children = (
 				1183E3F21B5ABA3B00850989 /* AppDelegate.swift */,
 				1183E3F61B5ABA3B00850989 /* Main.storyboard */,
+				1183E41A1B5AC48D00850989 /* RootTableViewController.swift */,
+				1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */,
+				1183E4201B5B114100850989 /* EditDNASeqViewController.swift */,
+				1156BA1C1B5D8E7B00508B4B /* AlignmentResultViewController.swift */,
+				1156BA181B5D78D300508B4B /* AlignmentSettingsViewController.swift */,
+				1156BA1A1B5D856600508B4B /* AlignmentChooseViewController.swift */,
+				1183E42E1B5C8C8000850989 /* KmerTabViewController.swift */,
 				1183E4301B5C92CF00850989 /* KmerFreqViewController.swift */,
 				1156BA091B5D5E6700508B4B /* KmerProfileViewController.swift */,
 				1183E42C1B5C873000850989 /* KmerSettingsViewController.swift */,
+				1156BA161B5D6B6A00508B4B /* KmerChartViewController.swift */,
 				1183E4281B5C3A8A00850989 /* ShowRNAProteinViewController.swift */,
+				1183E4161B5AC29C00850989 /* FastaFormat.swift */,
 				1183E42A1B5C3F9900850989 /* BioAlgorithm.swift */,
-				1183E42E1B5C8C8000850989 /* KmerTabViewController.swift */,
+				1156BA221B5D9C1500508B4B /* LocalAlignment.swift */,
+				1156BA241B5DABDB00508B4B /* GlobalAlignment.swift */,
 				1183E3F91B5ABA3B00850989 /* Images.xcassets */,
 				1183E3FB1B5ABA3B00850989 /* LaunchScreen.xib */,
 				1183E3F01B5ABA3B00850989 /* Supporting Files */,
 				1183E4121B5ABBF900850989 /* JX469983.fasta */,
 				1183E4141B5ABC8900850989 /* JX069768.fasta */,
 				1183E4221B5B206B00850989 /* FJ817486.fasta */,
-				1183E4161B5AC29C00850989 /* FastaFormat.swift */,
-				1183E41A1B5AC48D00850989 /* RootTableViewController.swift */,
 				1183E41C1B5AD1C400850989 /* DNASeqCell.xib */,
+				1156BA1E1B5D927300508B4B /* AlignmentCell.xib */,
 				1183E41E1B5AD49C00850989 /* DNASeqCell.swift */,
-				1183E4201B5B114100850989 /* EditDNASeqViewController.swift */,
-				1183E4261B5B4D9400850989 /* DownloadGenBankViewController.swift */,
-				1156BA161B5D6B6A00508B4B /* KmerChartViewController.swift */,
+				1156BA201B5D957900508B4B /* AlignmentCell.swift */,
 			);
 			path = BioinformaticsApp;
 			sourceTree = "<group>";
@@ -297,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1183E3F81B5ABA3B00850989 /* Main.storyboard in Resources */,
+				1156BA1F1B5D927300508B4B /* AlignmentCell.xib in Resources */,
 				1183E3FD1B5ABA3B00850989 /* LaunchScreen.xib in Resources */,
 				1183E4231B5B206B00850989 /* FJ817486.fasta in Resources */,
 				1183E4131B5ABBF900850989 /* JX469983.fasta in Resources */,
@@ -321,16 +343,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1183E4291B5C3A8A00850989 /* ShowRNAProteinViewController.swift in Sources */,
+				1156BA231B5D9C1500508B4B /* LocalAlignment.swift in Sources */,
 				1156BA171B5D6B6A00508B4B /* KmerChartViewController.swift in Sources */,
 				1183E41B1B5AC48D00850989 /* RootTableViewController.swift in Sources */,
+				1156BA1D1B5D8E7B00508B4B /* AlignmentResultViewController.swift in Sources */,
 				1183E4171B5AC29C00850989 /* FastaFormat.swift in Sources */,
 				1183E4211B5B114100850989 /* EditDNASeqViewController.swift in Sources */,
 				1183E4271B5B4D9400850989 /* DownloadGenBankViewController.swift in Sources */,
 				1183E42F1B5C8C8000850989 /* KmerTabViewController.swift in Sources */,
 				1183E41F1B5AD49C00850989 /* DNASeqCell.swift in Sources */,
 				1183E42B1B5C3F9900850989 /* BioAlgorithm.swift in Sources */,
+				1156BA191B5D78D300508B4B /* AlignmentSettingsViewController.swift in Sources */,
+				1156BA261B5DC41300508B4B /* GlobalAlignment.swift in Sources */,
 				1183E4311B5C92CF00850989 /* KmerFreqViewController.swift in Sources */,
 				1156BA0A1B5D5E6700508B4B /* KmerProfileViewController.swift in Sources */,
+				1156BA1B1B5D856600508B4B /* AlignmentChooseViewController.swift in Sources */,
+				1156BA211B5D957900508B4B /* AlignmentCell.swift in Sources */,
 				1183E42D1B5C873000850989 /* KmerSettingsViewController.swift in Sources */,
 				1183E3F31B5ABA3B00850989 /* AppDelegate.swift in Sources */,
 			);
