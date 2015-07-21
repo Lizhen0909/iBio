@@ -23,13 +23,13 @@ The **Edit** button on the up-right is used to delete recrods. The deleting is p
 
 <img src="screenshot/screen_dna_seq_delete.png" alt="delete DNA sequence" width="350px" >
 
-The **+** button on the up-left creates a new record and takes user to the *details* view. When finishing editing, use the save button on the up-right to save the change.
+The **"+"** button on the up-left creates a new record and takes user to the *details* view. When finishing editing, use the save button on the up-right to save the change.
 
 <img src="screenshot/screen_dna_seq_new.png" alt="add DNA sequence" width="350px" >
 
-User may editing exising record by select a row, it takes user to the same view as the *+* function.
+User may editing exising record by select a row, it takes user to the same view as the **"+"** function.
 
-Creating a record mannually is tedious, the **Download** button right next to *+* let user to download a record from GenBank. Just input the **accession number** and click **Download**. The function is implemented using NCBI [Entrez Programming Utilities](http://www.ncbi.nlm.nih.gov/books/NBK25501/) webservices. 
+Creating a record mannually is tedious, the **Download** button right next to **"+"** let user to download a record from GenBank. Just input the **accession number** and click **Download**. The function is implemented using NCBI [Entrez Programming Utilities](http://www.ncbi.nlm.nih.gov/books/NBK25501/) webservices. 
 
 <img src="screenshot/screen_dna_seq_download.png" alt="download DNA sequence" width="350px" >
 
