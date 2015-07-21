@@ -19,7 +19,7 @@ A table view of the App shows the list of DNA sequences. A few samples are provi
 
 [[screenshot/screen_dna_seq.png|width=100px]]
  
-
+<img src="screenshot/screen_dna_seq.png" alt="alt text" width="100px" height="50px">
 
 The **Edit** button on the up right is used to delete recrods, which is persistent on the disk. 
 
