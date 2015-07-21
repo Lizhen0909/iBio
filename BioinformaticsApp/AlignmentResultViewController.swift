@@ -19,14 +19,39 @@ class AlignmentResultViewController: UIViewController, UITableViewDataSource, UI
     var global_alignment:Bool=true
     var s1:String!
     var s2:String!
-    
+    var align1:String!
+    var align2:String!
+    var score:Int!
+    var tableData:[(String,String)]!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        configureTableView()
         let nib = UINib(nibName: "AlignmentCell", bundle: nil)
         tableView.registerNib(nib,
             forCellReuseIdentifier: tableIdentifier)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
         
+        self.updateUI()
+        self.makeTableData()
+     }
+    
+    func rotated()   {
+        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)) {
+            self.makeTableData()
+            tableView.reloadData()
+        }
+        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))  {
+            self.makeTableData()
+            tableView.reloadData()
+        }
+    }
+    
+    func configureTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    func updateUI() {
         var scorefun:((Character,Character)->Int)!
         if score_matrix == "BLOSUM62" {
             scorefun=BLOSUM62
@@ -34,7 +59,6 @@ class AlignmentResultViewController: UIViewController, UITableViewDataSource, UI
             scorefun=PAM250
         }
         
-
         var score:Int
         var align1:String
         var align2:String
@@ -49,6 +73,34 @@ class AlignmentResultViewController: UIViewController, UITableViewDataSource, UI
         }
         
         self.titleLabel.text="\(score_matrix) Score: \(score)"
+        self.align1=align1
+        self.align2=align2
+        self.score=score
+    }
+    
+    func makeTableData(){
+       let lineLength:Int=getLineLength()
+       self.tableData=[]
+        let length=count(align1)
+        var i=0
+        while i<length {
+            var sublen=lineLength
+            if i+lineLength > length {
+                sublen=length-i
+            }
+            let sub1 = (align1 as NSString).substringWithRange(NSRange(location: i, length: sublen))
+            let sub2 = (align2 as NSString).substringWithRange(NSRange(location: i, length: sublen))
+            tableData.append((sub1 as String,sub2 as String))
+            i = i + lineLength
+        }
+    }
+    
+    func getLineLength()->Int{
+        if isLandscapeOrientation(){
+            return 50
+        } else {
+            return 25
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,17 +108,36 @@ class AlignmentResultViewController: UIViewController, UITableViewDataSource, UI
         // Dispose of any resources that can be recreated.
     }
 
-    func tableView(tableView: UITableView,
-        numberOfRowsInSection section: Int) -> Int {
-        return 0
+    // MARK: UITableViewDelegate
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if isLandscapeOrientation() {
+            return   120.0
+        } else {
+            return   155.0
+        }
+    }
+    
+    func isLandscapeOrientation() -> Bool {
+        return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
+    }
+
+    // MARK: - Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(
             tableIdentifier) as! AlignmentCell
-        
-        
-        
+        let rowdata=self.tableData[indexPath.row]
+        cell.seq1=rowdata.0
+        cell.seq2=rowdata.1
         return cell
     }
 }

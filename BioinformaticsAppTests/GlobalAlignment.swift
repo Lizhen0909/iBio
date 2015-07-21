@@ -40,7 +40,7 @@ public class GlobalAlignment {
         let M=charArray1.count+1
         let N=charArray2.count+1
         var matrix = zero(M,N: N)
-        var path=zero(M,N: N)  //0 diag, 1: row, 2 column
+        var path=zero(M,N: N)  //0 diag, 2: row, 1 column
         for i in 1..<M {
             matrix[i][0]=i*self.gap
             path[i][0]=2

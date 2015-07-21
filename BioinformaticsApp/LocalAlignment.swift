@@ -41,7 +41,7 @@ public class LocalAlignment {
         let M=charArray1.count+1
         let N=charArray2.count+1
         var matrix = zero(M,N: N)
-        var path=zero(M,N: N)  //0 diag, 1: row, 2 column,3 jump
+        var path=zero(M,N: N)  //0 diag, 2: row, 1 column,3 jump
         for i in 1..<M {
             matrix[i][0]=0
             path[i][0]=3

@@ -17,7 +17,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dna-icon" translatesAutoresizingMaskIntoConstraints="NO" id="DGN-JW-6gq">
-                    <rect key="frame" x="112" y="146" width="256" height="256"/>
+                    <rect key="frame" x="112" y="145" width="256" height="256"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bioinformatics on iPhone" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
                     <rect key="frame" x="20" y="63" width="440" height="43"/>
@@ -25,17 +25,33 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZG-dm-E0W">
+                    <rect key="frame" x="0.0" y="401" width="480" height="38"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18n-fk-Wuy">
+                    <rect key="frame" x="0.0" y="106" width="480" height="39"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="kZG-dm-E0W" firstAttribute="top" secondItem="DGN-JW-6gq" secondAttribute="bottom" id="5ad-Yk-xF5"/>
+                <constraint firstItem="18n-fk-Wuy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bgx-Dw-Yir"/>
+                <constraint firstItem="18n-fk-Wuy" firstAttribute="height" secondItem="kZG-dm-E0W" secondAttribute="height" id="C72-lM-e5L"/>
+                <constraint firstItem="DGN-JW-6gq" firstAttribute="top" secondItem="18n-fk-Wuy" secondAttribute="bottom" id="Fg7-Dw-zw1"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="63" id="MCp-z5-8dY"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
                 <constraint firstAttribute="centerX" secondItem="DGN-JW-6gq" secondAttribute="centerX" id="dvs-LL-RmO"/>
                 <constraint firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" constant="20" id="eKz-xp-ZjY"/>
-                <constraint firstItem="DGN-JW-6gq" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="40" id="hwV-8a-Ajn"/>
+                <constraint firstItem="kZG-dm-E0W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gaO-JY-B8v"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="kZG-dm-E0W" secondAttribute="bottom" id="iph-St-yh3"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="maM-6l-Bfh"/>
+                <constraint firstAttribute="trailing" secondItem="18n-fk-Wuy" secondAttribute="trailing" id="p1g-br-CVa"/>
+                <constraint firstItem="18n-fk-Wuy" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" id="tMz-Br-v0Y"/>
+                <constraint firstAttribute="trailing" secondItem="kZG-dm-E0W" secondAttribute="trailing" id="veR-b2-E4W"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

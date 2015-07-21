@@ -24,6 +24,7 @@ class ShowRNAProteinViewController: UIViewController {
             self.title="Protein Translation"
             seqText.text=dna_to_protein(dnaString)
         }
+        seqText.setContentOffset(CGPointZero, animated:true)
 
     }
 
