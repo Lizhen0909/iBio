@@ -1,4 +1,5 @@
-# A Bioinformatics App on iPhone
+# A Bioinformatics App on iPhone 
+
 ## Introduction
 The App demostrates a few of basic functions and algorthms for Bioinformatics.
 * Manage Nucleotides sequences. Use may download them from GenBank by accession numbers
@@ -15,6 +16,10 @@ The App demostrates a few of basic functions and algorthms for Bioinformatics.
 ### Data management
 
 A table view of the App shows the list of DNA sequences. A few samples are provided for the first time user. The table shows the *accession number*, *version* and *description* of the sequence. Further information can be found [here](http://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html).
+
+[[screenshot/screen_dna_seq.png|width=100px]]
+ 
+
 
 The **Edit** button on the up right is used to delete recrods, which is persistent on the disk. 
 
