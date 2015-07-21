@@ -20,13 +20,18 @@ A table view of the App shows the list of DNA sequences. A few samples are provi
 <img src="screenshot/screen_dna_seq.png" alt="show DNA sequence" width="350px" >
 
 The **Edit** button on the up-right is used to delete recrods. The deleting is persistent. 
+
 <img src="screenshot/screen_dna_seq_delete.png" alt="delete DNA sequence" width="350px" >
 
-The **New** button on the up left creates a new record and takes user to the *details* view. When finishing editing, use the save button on the up-right to save the change.
+The **+** button on the up-left creates a new record and takes user to the *details* view. When finishing editing, use the save button on the up-right to save the change.
 
-User may editing exising record by select a row, it takes user to the same view as the *new* function.
+<img src="screenshot/screen_dna_seq_new.png" alt="delete DNA sequence" width="350px" >
 
-Creating a record mannually is tedious, the **Download** button right next to *New* let user to download a record from GenBank. Just input the **accession number** and click **Download**. The function is implemented using NCBI [Entrez Programming Utilities](http://www.ncbi.nlm.nih.gov/books/NBK25501/) webservices. 
+User may editing exising record by select a row, it takes user to the same view as the *+* function.
+
+Creating a record mannually is tedious, the **Download** button right next to *+* let user to download a record from GenBank. Just input the **accession number** and click **Download**. The function is implemented using NCBI [Entrez Programming Utilities](http://www.ncbi.nlm.nih.gov/books/NBK25501/) webservices. 
+
+<img src="screenshot/screen_dna_seq_download.png" alt="delete DNA sequence" width="350px" >
 
 ### Translating DNA to RNA/Proten
 The **RNA** and **Protein** buttons on the buttom tool bar of *Details* view let user to translating the DNA sequences to RNA and Proten. The results are shown in ??
