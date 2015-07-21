@@ -1,4 +1,5 @@
-# A Bioinformatics App on iPhone
+# A Bioinformatics App on iPhone 
+
 ## Introduction
 The App demostrates a few of basic functions and algorthms for Bioinformatics.
 * Manage Nucleotides sequences. Use may download them from GenBank by accession numbers
@@ -16,30 +17,52 @@ The App demostrates a few of basic functions and algorthms for Bioinformatics.
 
 A table view of the App shows the list of DNA sequences. A few samples are provided for the first time user. The table shows the *accession number*, *version* and *description* of the sequence. Further information can be found [here](http://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html).
 
-The **Edit** button on the up right is used to delete recrods, which is persistent on the disk. 
+<img src="screenshot/screen_dna_seq.png" alt="show DNA sequence" width="350px" >
 
-The **New** button on the up left creates a new record and takes user to the *details* view. When finishing editing, use the save button on the up-right to save the change.
+The **Edit** button on the up-right is used to delete recrods. The deleting is persistent. 
 
-User may editing exising record by select a row, it takes user to the same view as the *new* function.
+<img src="screenshot/screen_dna_seq_delete.png" alt="delete DNA sequence" width="350px" >
 
-Creating a record mannually is tedious, the **Download** button right next to *New* let user to download a record from GenBank. Just input the **accession number** and click **Download**. The function is implemented using NCBI [Entrez Programming Utilities](http://www.ncbi.nlm.nih.gov/books/NBK25501/) webservices. 
+The **"+"** button on the up-left creates a new record and takes user to the *details* view. When finishing editing, use the save button on the up-right to save the change.
+
+<img src="screenshot/screen_dna_seq_new.png" alt="add DNA sequence" width="350px" >
+
+User may editing exising record by select a row, it takes user to the same view as the **"+"** function.
+
+Creating a record mannually is tedious, the **Download** button right next to **"+"** let user to download a record from GenBank. Just input the **accession number** and click **Download**. The function is implemented using NCBI [Entrez Programming Utilities](http://www.ncbi.nlm.nih.gov/books/NBK25501/) webservices. 
+
+<img src="screenshot/screen_dna_seq_download.png" alt="download DNA sequence" width="350px" >
 
 ### Translating DNA to RNA/Proten
-The **RNA** and **Protein** buttons on the buttom tool bar of *Details* view let user to translating the DNA sequences to RNA and Proten. The results are shown in ??
+The **RNA** and **Protein** buttons on the buttom tool bar of *Details* view let user to translating the DNA sequences to RNA and Proten. 
+
+<img src="screenshot/screen_dna_seq_protein.png" alt="Protein" width="350px" >
 
 ### k-mer functions
-The **k-mer** button takes user to k-mer related function as shown ??. 
-
+The **k-mer** button takes user to the view of k-mer related function. 
 It is a tab bar view. The setting tab let user change the k-mer size. The default size is 4. When click *Calculate*, the underlying k-mer data is regenerated. 
+
+<img src="screenshot/screen_kmer_setting.png" alt="kmer settings" width="350px" >
 
 The **k-mer Freq** tab shows the table of ordered frequencies.
 
+<img src="screenshot/screen_kmer_freq.png" alt="kmer freq" width="350px" >
+
 The **Profile** tab shows the counting frequencies.
+
+<img src="screenshot/screen_kmer_count_freq.png" alt="count freq" width="350px" >
 
 Finally the **Chart** tab shows the histogram chart for the counting frequencies.
 
+<img src="screenshot/screen_kmer_chart.png" alt="count chart" width="350px" >
+
 ### Alignment
+
+<img src="screenshot/screen_align_setting.png" alt="alignment settings" width="350px" >
+
 The **Align** button take to the alignment setting view. User needs to choose another sequence to align with. When **Select**, a picker view lets user to make the selection. 
+
+<img src="screenshot/screen_align_select.png" alt="alignment choose" width="350px" >
 
 User may also:
 - choose a score matrix between **BLOSUM62** and **PAM250**
@@ -47,6 +70,8 @@ User may also:
 - change the gap penalty. Note that the penalty can not be negative.
 
 Finishing all the choices, **Go** button shows the alignment result in a table view. The aligned sequences are divided into lines to make it easy to read.
+
+<img src="screenshot/screen_align_score.png" alt="alignment score" width="350px" >
 
 ## Project Reference
 The App applies [ios-charts](https://github.com/danielgindi/ios-charts) to draw histogram chart for k-mer profiles.
