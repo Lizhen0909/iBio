@@ -17,9 +17,10 @@ The App demostrates a few of basic functions and algorthms for Bioinformatics.
 
 A table view of the App shows the list of DNA sequences. A few samples are provided for the first time user. The table shows the *accession number*, *version* and *description* of the sequence. Further information can be found [here](http://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html).
 
-<img src="screenshot/screen_dna_seq.png" alt="show DNA sequence" width="300px" ><img src="screenshot/screen_dna_seq_delete.png" alt="delete DNA sequence" width="300px" >
+<img src="screenshot/screen_dna_seq.png" alt="show DNA sequence" width="350px" >
 
 The **Edit** button on the up-right is used to delete recrods. The deleting is persistent. 
+<img src="screenshot/screen_dna_seq_delete.png" alt="delete DNA sequence" width="350px" >
 
 The **New** button on the up left creates a new record and takes user to the *details* view. When finishing editing, use the save button on the up-right to save the change.
 
