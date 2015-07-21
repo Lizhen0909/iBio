@@ -35,6 +35,7 @@ Creating a record mannually is tedious, the **Download** button right next to *+
 
 ### Translating DNA to RNA/Proten
 The **RNA** and **Protein** buttons on the buttom tool bar of *Details* view let user to translating the DNA sequences to RNA and Proten. 
+
 <img src="screenshot/screen_dna_seq_protein.png" alt="Protein" width="350px" >
 
 ### k-mer functions
@@ -56,7 +57,12 @@ Finally the **Chart** tab shows the histogram chart for the counting frequencies
 <img src="screenshot/screen_kmer_chart.png" alt="count chart" width="350px" >
 
 ### Alignment
+
+<img src="screenshot/screen_align_setting.png" alt="alignment settings" width="350px" >
+
 The **Align** button take to the alignment setting view. User needs to choose another sequence to align with. When **Select**, a picker view lets user to make the selection. 
+
+<img src="screenshot/screen_align_select.png" alt="alignment choose" width="350px" >
 
 User may also:
 - choose a score matrix between **BLOSUM62** and **PAM250**
@@ -64,6 +70,8 @@ User may also:
 - change the gap penalty. Note that the penalty can not be negative.
 
 Finishing all the choices, **Go** button shows the alignment result in a table view. The aligned sequences are divided into lines to make it easy to read.
+
+<img src="screenshot/screen_align_score.png" alt="alignment score" width="350px" >
 
 ## Project Reference
 The App applies [ios-charts](https://github.com/danielgindi/ios-charts) to draw histogram chart for k-mer profiles.
