@@ -18,12 +18,13 @@ class KmerChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title="Counting Chart"
         let barViewControllers = self.tabBarController?.viewControllers
         self.settingsVC = barViewControllers![0] as! KmerSettingsViewController
         self.updateTableData()
         
         self.setChart()
+        
 
     }
     

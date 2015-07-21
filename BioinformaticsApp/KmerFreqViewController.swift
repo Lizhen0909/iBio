@@ -21,6 +21,7 @@ class KmerFreqViewController: UITableViewController {
         let barViewControllers = self.tabBarController?.viewControllers
         self.settingsVC = barViewControllers![0] as! KmerSettingsViewController
         self.updateTableData()
+        self.title="k-mer Freq"
     }
     
     func updateTableData(){

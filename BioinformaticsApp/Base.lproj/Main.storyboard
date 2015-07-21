@@ -682,10 +682,10 @@
             </objects>
             <point key="canvasLocation" x="1726" y="1936"/>
         </scene>
-        <!--Profile-->
+        <!--Counting Freq-->
         <scene sceneID="wPK-Ix-JqJ">
             <objects>
-                <tableViewController id="CII-c6-lfe" customClass="KmerProfileViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Counting Freq" id="CII-c6-lfe" customClass="KmerProfileViewController" customModule="BioinformaticsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="s5A-FS-USs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

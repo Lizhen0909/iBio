@@ -21,6 +21,7 @@ class KmerProfileViewController: UITableViewController {
         let barViewControllers = self.tabBarController?.viewControllers
         self.settingsVC = barViewControllers![0] as! KmerSettingsViewController
         self.updateTableData()
+        self.title="Counting Freq"
     }
     
     func updateTableData(){
