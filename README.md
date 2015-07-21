@@ -17,9 +17,7 @@ The App demostrates a few of basic functions and algorthms for Bioinformatics.
 
 A table view of the App shows the list of DNA sequences. A few samples are provided for the first time user. The table shows the *accession number*, *version* and *description* of the sequence. Further information can be found [here](http://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html).
 
-[[screenshot/screen_dna_seq.png|width=100px]]
- 
-<img src="screenshot/screen_dna_seq.png" alt="alt text" width="100px" height="50px">
+<img src="screenshot/screen_dna_seq.png" alt="show DNA sequence" width="250px" >
 
 The **Edit** button on the up right is used to delete recrods, which is persistent on the disk. 
 
