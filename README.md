@@ -70,6 +70,7 @@ Finally the **Chart** tab shows the histogram chart for the count frequencies.
 #### Settings
 
 The **Align** button first shows the alignment setting view. 
+
 <img src="screenshot/screen_align_setting.png" alt="alignment settings" width="350px" >
 
 User needs to choose another sequence to align with. When clicking **Select** button, a picker view shown lets user to make the selection. 
