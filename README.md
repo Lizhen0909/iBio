@@ -30,7 +30,7 @@ The **"+"** button on the up-left creates a new record. The *details* view is sh
 <img src="screenshot/screen_dna_seq_new.png" alt="add DNA sequence" width="350px" >
 
 #### Edit
-User may edit a existing record by select the row, it takes user to the same *detail* view as the **"+"** button.
+User may edit an existing record by selecting the row, it takes user to the same *detail* view as the **"+"** button.
 
 #### Download 
 Creating a record mannually is tedious, the **Download** button right next to **"+"** let user to download a record from GenBank. Just input the **accession number** and click **Download**. The function is implemented using NCBI [Entrez Programming Utilities](http://www.ncbi.nlm.nih.gov/books/NBK25501/) webservices. 
@@ -68,9 +68,11 @@ Finally the **Chart** tab shows the histogram chart for the count frequencies.
 ### Alignment
 
 #### Settings
+
+The **Align** button first shows the alignment setting view. 
 <img src="screenshot/screen_align_setting.png" alt="alignment settings" width="350px" >
 
-The **Align** button shows the alignment setting view. User needs to choose another sequence to align with. When clicking **Select** button, a picker view shown lets user to make the selection. 
+User needs to choose another sequence to align with. When clicking **Select** button, a picker view shown lets user to make the selection. 
 
 <img src="screenshot/screen_align_select.png" alt="alignment choose" width="350px" >
 
